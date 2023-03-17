@@ -35,14 +35,15 @@ header('Location:../index.php?login_err=connexion');
         </ul>
 
         <div class="flex justify-center my-8">
-        <form class="flex items-center border rounded-md" method=get>
+        <form class="flex items-center border rounded-md" action="search.php" method=get> 
+            <!-- ma barre de rechere -->
             <input type="text" name="search" id="search" placeholder="Rechercher" class="py-2 px-3 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md">Rechercher</button>
-        </form>
+       </form>
+    
+    </div>
+    
+    <ul id="startup-ideas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-</div>
-
-<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <?php
     // Requête SQL pour rechercher des idées de startups en fonction de la recherche
     $search = isset($_GET['search']) ? $_GET['search'] : '';
@@ -65,9 +66,6 @@ header('Location:../index.php?login_err=connexion');
             <div class="px-6 py-4 bg-gray-100">
                 <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="idea.php?param=<?php echo $id;?>">Lire la suite</a>
             </div>
-            <!-- <form class="px-6 py-4 bg-gray-100" methode=get>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lire la suite</button>
-            </form> -->
         </li>
     <?php
     }
@@ -77,6 +75,48 @@ header('Location:../index.php?login_err=connexion');
 
 
 <?php include '../files/footer.php'; ?>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- <script>
+    // Récupérer l'élément de saisie de recherche
+// Récupérer l'élément de saisie de recherche
+const searchInput = document.getElementById('search');
+
+// Ajouter un écouteur d'événements "input"
+searchInput.addEventListener('input', function() {
+
+  // Récupérer la valeur de la saisie de recherche
+  const searchValue = searchInput.value;
+
+  // Envoyer une requête AJAX pour récupérer les résultats de recherche
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'search.php?search=' + encodeURIComponent(searchValue));
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Mettre à jour la liste des idées de startup avec les résultats de recherche
+      const startupIdeas = document.getElementById('startup-ideas');
+      startupIdeas.innerHTML = xhr.responseText;
+    }
+  };
+  xhr.send();
+});
+
+
+</script> -->
+
+
+
+
+
+
+<!-- <?php
+header("Cache-Control: no-cache, must-revalidate"); // désactive la mise en cache du navigateur
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // fixe une date d'expiration pour la page
+?> -->
 
 
 </body>

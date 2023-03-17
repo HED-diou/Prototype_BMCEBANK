@@ -51,9 +51,9 @@
         <li class="lg:pr-2" data-te-nav-item-ref>
           <a
             class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            href="../user/pr"
             data-te-nav-link-ref
-            >Team</a
+            >principal</a
           >
         </li>
         <li class="lg:pr-2" data-te-nav-item-ref>
@@ -61,7 +61,7 @@
             class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
             href="#"
             data-te-nav-link-ref
-            >Projects</a
+            >Deconexion</a
           >
         </li>
       </ul>
@@ -74,7 +74,7 @@
       <!-- Icon -->
       <a
         class="mr-4 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-        href="#">
+        href="../files/deconexion.php">
         <span class="[&>svg]:w-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@
       <div class="relative" data-te-dropdown-ref>
         <a
           class="hidden-arrow mr-4 flex items-center text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-          href="#"
+          href="../user/pr"
           id="dropdownMenuButton1"
           role="button"
           data-te-dropdown-toggle-ref
@@ -118,7 +118,7 @@
           <li>
             <a
               class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
-              href="#"
+              href="../user/pr"
               data-te-dropdown-item-ref
               >Action</a
             >
@@ -126,7 +126,7 @@
           <li>
             <a
               class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
-              href="#"
+              href="../user/pr"
               data-te-dropdown-item-ref
               >Another action</a
             >
@@ -134,7 +134,7 @@
           <li>
             <a
               class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
-              href="#"
+              href="../user/pr"
               data-te-dropdown-item-ref
               >Something else here</a
             >
@@ -184,6 +184,7 @@
               >Something else here</a
             >
           </li>
+          
         </ul>
       </div>
     </div>

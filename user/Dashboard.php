@@ -124,15 +124,15 @@
     $req->closeCursor();
     ?>
 </ul>
-          <form method="post" action="deconnexion.php">
-            <button type="submit" class="btn btn-danger">Déconnexion</button>
-          </form>
+          
         </div>
       </div>
     </div>
 
 
-
+    <!-- <form method="post" action="deconnexion.php">
+            <button type="submit" class="btn btn-danger">Déconnexion</button>
+          </form> -->
     <?php include '../files/footer.php'; ?>
   </body>
 </html>
