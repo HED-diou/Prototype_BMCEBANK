@@ -1,15 +1,9 @@
 <?php
 
 try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=startupss','root','');
-    //$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXEPTION);
-    //$bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-}
+	$bdd = new PDO('mysql:host=localhost;dbname=startupss','root','');
 catch(Exeption $e)
-{
- die('Ereur' . $e ->getMessage());
-}
+	die('Ereur' . $e ->getMessage());
 
 
 ?>
