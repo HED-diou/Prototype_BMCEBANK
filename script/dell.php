@@ -9,7 +9,7 @@ $id_sup = htmlspecialchars($_GET['param']);
 // var_dump($_GET['id']);
 $supp = $bdd->prepare('DELETE FROM startups_ideas WHERE id = ?');
 $supp->execute(array($id_sup ));
-header('Location: ../Dashboard/user?sup=succes_supp');
+header('Location: ../Dashboard/?sup=succes_supp');
 die();
 }
 ?>

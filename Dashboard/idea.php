@@ -1,8 +1,8 @@
 <?php 
     session_start();
     require_once '../script/server.php';
-     if(!isset($_SESSION['id']))
-         header('Location:../login.php?login_err=connexion');
+    //  if(!isset($_SESSION['id']))
+    //      header('Location:../login.php?login_err=connexion');
 
 // Récupérer l'ID de la startup depuis l'URL
 $id = isset($_GET['param']) ? $_GET['param'] : '2';
@@ -17,6 +17,9 @@ $row = $req->fetch();
 $title = $row['title'];
 $description = $row['description'];
 $username = $row['name'];
+if(!isset($_SESSION['id']))
+$id = 0;
+else
 $id = $_SESSION['id'];
 $user_id = $row['user_id'];
 $idd = $row['id'];
@@ -54,8 +57,11 @@ $date = $row['updated_at'];
             </button>  -->
             <div class="form-group">
             <?php
-                    
-              if ($_SESSION['id'] == $user_id) {
+                    if(!isset($_SESSION['id']))
+                    $id = 0;
+                    else
+                    $id = $_SESSION['id'];
+              if ($id == $user_id) {
                     echo '<div class="flex justify-end mb-4">';
                     echo '<a href="modifier.php?param=' . $idd . '" class="button button-shadow">Modifier</a>';
                     echo '<a href="../script/dell.php?param=' . $idd . '" class="button button-shadow">Supprimer</a>';
@@ -63,10 +69,10 @@ $date = $row['updated_at'];
                     echo '<div class="form-group"></div>';
               }
               else{
-                    echo '<a href="achat.php" class="button button-primary button-shadow">Acheter l\'idée</a>';
+                    echo '<a href="achat" class="button button-primary button-shadow">Acheter l\'idée</a>';
               }
                     echo '<div class="form-group">';
-                    echo '<a href="user" class="button button-primary button-shadow">Retoure</a>';echo '</div>';
+                    echo '<a href="../" class="button button-primary button-shadow">Retoure</a>';echo '</div>';
               ?>
               </div>
         </form>

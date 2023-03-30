@@ -30,7 +30,7 @@
             
             <?php if(isset($_SESSION['id'])) { ?>
                 <li><a href="">Dashboard</a></li>
-                <li><a href="Dashboard/user">Home</a></li>
+                <li><a href="Dashboard/">Home</a></li>
                 <li><a href="script/deconexion">Déconnexion</a></li>
             <?php } if(!isset($_SESSION['id'])) { ?>
                 <li><a href="Dashboard/login">Connexion</a></li>

@@ -2,7 +2,7 @@
     session_start();
     require_once '../script/server.php';
      if(isset($_SESSION['id']))
-         header('Location:./user');
+         header('Location:./');
 
 
 // Récupération du terme de recherche
@@ -24,7 +24,7 @@ while ($row = $req->fetch()) {
 }
 
 // Envoi des résultats à la page "pr.php"
-header('Location: ../Dashboard/user?search=' . urlencode($search) . '&results=' . urlencode(json_encode($results)));
+header('Location: ../Dashboard/?search=' . urlencode($search) . '&results=' . urlencode(json_encode($results)));
 exit;
 ?>
 

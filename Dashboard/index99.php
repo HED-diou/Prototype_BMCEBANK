@@ -2,7 +2,7 @@
     session_start();
     require_once '../script/server.php';
      if(!isset($_SESSION['id']))
-         header('Location:../login.php?login_err=connexion');
+         header('Location:./login.php?login_err=connexion');
 ?>
 
 <!DOCTYPE html>

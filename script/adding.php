@@ -2,7 +2,7 @@
     session_start();
     require_once '../script/server.php';
      if(!isset($_SESSION['id']))
-         header('Location:../login.php?login_err=connexion');
+         header('Location:./login.php?login_err=connexion');
 
 
 
@@ -27,12 +27,12 @@ if(isset($_POST['description']))
                 ':description' => $message,
                 ':user_id' => $_SESSION['id']
             ));
-            header('Location:../Dashboard/user?login_err=success');
+            header('Location:../Dashboard/?login_err=success');
             die();
     }
     
 }
-header('Location:../Dashboard/user');
+header('Location:../Dashboard/');
 die();
 
 

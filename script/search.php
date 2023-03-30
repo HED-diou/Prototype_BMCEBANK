@@ -1,8 +1,8 @@
 <?php 
     session_start();
     require_once '../script/server.php';
-     if(isset($_SESSION['id']))
-         header('Location:./user');
+    //  if(isset($_SESSION['id']))
+    //      header('Location:./');
 
 
 // Récupération du terme de recherche

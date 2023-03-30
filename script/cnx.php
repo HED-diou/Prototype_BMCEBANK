@@ -23,7 +23,7 @@ if(isset($_POST))
                 $_SESSION['id'] = $data->id;
                 $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
                 $_SESSION['sudo'] = $data->sudo;
-                header('location: ../Dashboard/user.php?login_err=success');die();
+                header('location: ../Dashboard/?login_err=success');die();
              }
             else
                header('Location: ../login.php?login_err=syntax'); die(); 
